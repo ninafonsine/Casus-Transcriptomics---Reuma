@@ -1,0 +1,260 @@
+setwd("~/Library/CloudStorage/OneDrive-NHLStenden/Casus Reuma")
+
+library(BiocManager)
+library(Rsubread)
+
+
+#Referentiegenoom indexeren:
+buildindex(
+  basename = 'ref_humangenome',
+  reference = 'Genoom_Mens.fna',
+  memory = 6000,
+  indexSplit = TRUE)
+
+
+#Mapping:
+align.normaal1 <- align(index = "ref_humangenome", 
+                    readfile1 = "SRR4785819_1_subset40k.fastq", 
+                    readfile2 = "SRR4785819_2_subset40k.fastq",
+                    output_file = "normaal1.BAM")
+align.normaal2 <- align(index = "ref_humangenome", 
+                        readfile1 = "SRR4785820_1_subset40k.fastq", 
+                        readfile2 = "SRR4785820_2_subset40k.fastq",
+                        output_file = "normaal2.BAM")
+align.normaal3 <- align(index = "ref_humangenome", 
+                        readfile1 = "SRR4785828_1_subset40k.fastq", 
+                        readfile2 = "SRR4785828_2_subset40k.fastq",
+                        output_file = "normaal3.BAM")
+align.normaal4 <- align(index = "ref_humangenome", 
+                        readfile1 = "SRR4785831_1_subset40k.fastq", 
+                        readfile2 = "SRR4785831_2_subset40k.fastq",
+                        output_file = "normaal4.BAM")
+
+align.reuma1 <- align(index = "ref_humangenome", 
+                        readfile1 = "SRR4785979_1_subset40k.fastq", 
+                        readfile2 = "SRR4785979_2_subset40k.fastq",
+                        output_file = "reuma1.BAM")
+align.reuma2 <- align(index = "ref_humangenome", 
+                      readfile1 = "SRR4785980_1_subset40k.fastq", 
+                      readfile2 = "SRR4785980_2_subset40k.fastq",
+                      output_file = "reuma2.BAM")
+align.reuma3 <- align(index = "ref_humangenome", 
+                      readfile1 = "SRR4785986_1_subset40k.fastq", 
+                      readfile2 = "SRR4785986_2_subset40k.fastq",
+                      output_file = "reuma3.BAM")
+align.reuma4 <- align(index = "ref_humangenome", 
+                      readfile1 = "SRR4785988_1_subset40k.fastq", 
+                      readfile2 = "SRR4785988_2_subset40k.fastq",
+                      output_file = "reuma4.BAM")
+
+library(Rsamtools)
+
+# Bestandsnamen van de monsters
+samples <- c('normaal1', 'normaal2', 'normaal3', 'normaal4', 'reuma1', 'reuma2',
+             'reuma3', 'reuma4')
+
+# Voor elk monster: sorteer en indexeer de BAM-file
+# Sorteer BAM-bestanden
+lapply(samples, function(s) {sortBam(file = paste0(s, '.BAM'), 
+                                     destination = paste0(s, '.sorted'))
+})
+
+# Indexeer de gesorteerde BAM-file
+lapply(samples, function(s) {indexBam(file = paste0(s, '.sorted.bam'))
+})
+
+
+#Count matrix opstellen
+allsamples <- c("normaal1.BAM", "normaal2.BAM", "normaal3.BAM", "normaal4.BAM", 
+                "reuma1.BAM", "reuma2.BAM", "reuma3.bam", "reuma4.bam")
+count_matrix <- featureCounts(
+  files = allsamples,
+  annot.ext = "genomic.gtf",
+  isPairedEnd = TRUE,
+  isGTFAnnotationFile = TRUE,
+  GTF.attrType = "gene_id",
+  useMetaFeatures = TRUE
+)
+
+#Count matrix bekijken
+str(count_matrix)
+
+counts <- count_matrix$counts
+head(counts)
+
+colnames(counts) <- c("gezond1", "gezond2", "gezond3", "gezond4", 
+                      "reuma1", "reuma2", "reuma3", "reuma4")
+head(counts)
+
+#opslaan:
+
+write.csv(counts, 'reuma_countmatrix.csv')
+
+
+
+#Count matrix van Dewi inladen:
+
+counts = count_matrix_RA
+
+-------------------------------------------------------------------------------
+library(DESeq2)
+library(KEGGREST)
+library(EnhancedVolcano)
+library(pathview)
+
+
+#Metadata:
+conditie <- c("gezond", "gezond", "gezond", "gezond", 
+               "reuma", "reuma", "reuma", "reuma")
+conditie_table <- data.frame(conditie)
+rownames(conditie_table) <- c("SRR4785819", "SRR4785820", "SRR4785828", "SRR4785831", 
+                                    "SRR4785979", "SRR4785980", "SRR4785986", "SRR4785988")
+
+#Statistiek:
+dds <- DESeqDataSetFromMatrix(countData = counts,
+                              colData = conditie_table,
+                              design = ~ conditie)
+
+  # Voer analyse uit
+dds <- DESeq(dds)
+resultaten <- results(dds)
+
+write.table(resultaten, file = 'ResultatenReuma.csv', row.names = TRUE, col.names = TRUE)
+
+
+#Volcano plot:
+EnhancedVolcano(resultaten,
+                lab = rownames(resultaten),
+                x = 'log2FoldChange',
+                y = 'padj')
+
+#GO-analyse:
+
+BiocManager::install("goseq")
+BiocManager::install("org.Hs.eg.db")
+
+library(goseq)
+library(org.Hs.eg.db)
+
+# Haal resultaten
+res <- as.data.frame(resultaten)
+
+# Verwijder NA's
+res <- res[!is.na(res$padj), ]
+
+# Selecteer significante genen
+sig_genes <- as.integer(res$padj < 0.05)
+names(sig_genes) <- rownames(res)
+
+# Gecorrigeerd op lengte voor GO-analyse met hg19:
+
+pwf=nullp(sig_genes,"hg19","geneSymbol")
+
+#Find enriched GO terms:
+GO.wall=goseq(pwf,"hg19","geneSymbol")
+
+#How many enriched GO terms do we have:
+class(GO.wall)
+head(GO.wall)
+nrow(GO.wall)
+
+
+#GO termen filteren:
+GO.wall$padj <- p.adjust(GO.wall$over_represented_pvalue, method = "BH")
+
+sig_GO <- GO.wall[GO.wall$padj < 0.05, ]
+
+head(sig_GO)
+
+#plotten
+library(ggplot2)
+library(dplyr)
+
+library(dplyr)
+library(ggplot2)
+
+GO.wall %>% 
+  top_n(10, wt = -over_represented_pvalue) %>% 
+  mutate(hitsPerc = numDEInCat * 100 / numInCat) %>% 
+  ggplot(aes(x = hitsPerc, 
+             y = term, 
+             colour = over_represented_pvalue, 
+             size = numDEInCat)) +
+  geom_point() +
+  expand_limits(x = 0) +
+  labs(x = "Hits (%)", 
+       y = "GO term", 
+       colour = "p-value", 
+       size = "Aantal DE genen")
+
+--------------------------------------------------------------------------------
+# KEGG analyse:
+
+#Selecteer significante genen:
+  res <- as.data.frame(resultaten)
+  res <- res[!is.na(res$padj), ]
+
+  # significante genen
+    sig_genes <- rownames(res[res$padj < 0.05, ])
+    
+  #Gene symbols omzetten naar ENTREZ IDs
+    entrez_ids <- mapIds(org.Hs.eg.db,
+                         keys = sig_genes,
+                         column = "ENTREZID",
+                         keytype = "SYMBOL",  # pas dit aan indien nodig!
+                         multiVals = "first")
+    
+    # verwijder NA's
+    entrez_ids <- na.omit(entrez_ids)
+    
+#KEGG enrichment:
+  BiocManager::install("clusterProfiler")
+  library(clusterProfiler)
+
+
+# KEGG gene-pathway mapping ophalen
+kegg_data <- keggLink("pathway", "hsa")
+  
+kegg_df <- data.frame(
+  pathway = sub("path:", "", kegg_data),
+  gene = sub("hsa:", "", names(kegg_data))
+)
+
+
+# Overlap bepalen
+common <- intersect(entrez_ids, kegg_df$gene)
+
+
+# Enrichment uitvoeren
+kegg_enrich <- enricher(
+  gene = common,
+  TERM2GENE = kegg_df,
+  universe = kegg_df$gene)
+
+  
+# Bekijk resultaten
+  head(as.data.frame(kegg_enrich))
+  
+  
+
+# Descriptie toevoegen
+  path_names <- keggList("pathway", "hsa")
+  
+  kegg_res <- as.data.frame(kegg_enrich)
+  
+  kegg_res$Description <- path_names[kegg_res$ID]
+  
+  head(kegg_res)
+
+# Plot:
+  kegg_res %>%
+    head(10) %>%
+    ggplot(aes(x = Count,
+               y = Description,
+               colour = p.adjust)) +
+    geom_point(size = 4) +
+    labs(x = "Aantal genen",
+         y = "KEGG pathway",
+         colour = "gecorrigeerde p-waarde")
+  
+
