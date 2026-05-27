@@ -1,6 +1,8 @@
 # 🔬RNA-seq analyse van reumatoïde artritis: differentiële genexpressie en GO-analyse
 <sub>Nina Fonsine Schakel - [nina.schakel\@student.nhlstenden.com](mailto:nina.schakel@student.nhlstenden.com) - NHL Stenden en Van Hall Larenstein - Module J2P4_BT Moderne DNA-technologieën
 
+<sub>Datum: 29-05-2026
+
 ## Inleiding:
 +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling. Bronnen (PDF) kunnen in een aparte folder met verwijzing.
 Inleiding over het gehele onderzoek, niet specifiek over welk gen/pathway is gekozen (dat moet in discussie)
