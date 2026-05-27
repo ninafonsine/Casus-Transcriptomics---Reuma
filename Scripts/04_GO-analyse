@@ -94,3 +94,47 @@ names(down_vec) <- rownames(res)
          y = "GO term (biologische processen", 
          colour = "Adjusted p-value", 
          size = "Aantal DE genen")
+
+
+  # Top 10 processen in een staafdiagram visualiseren
+  library(GO.db)
+  
+  top10_GO_up <- GO_up %>%
+    filter(padj < 0.05) %>%
+    arrange(padj) %>%
+    slice_head(n = 10)
+  
+  
+  top10_GO_down <- GO_down %>%
+    filter(padj < 0.05) %>%
+    arrange(padj) %>%
+    slice_head(n = 10)
+  
+  
+  ## Data combineren
+  ### Richting toevoegen
+  top10_GO_up$direction <- "Upregulated"
+  top10_GO_down$direction <- "Downregulated"
+  
+  ### Combineer datasets
+  top10_GO_combined <- rbind(top10_GO_up, top10_GO_down)
+  
+  
+  ## Plotten
+  ggplot(top10_GO_combined,
+         aes(x = reorder(term, -log10(padj)),
+             y = -log10(padj),
+             fill = direction)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    facet_wrap(~ direction, scales = "free") +
+    scale_fill_manual(values = c(
+      "Upregulated" = "firebrick",
+      "Downregulated" = "steelblue"
+    )) +
+    labs(
+      title = "GO enrichment in RA",
+      x = "GO-term",
+      y = "-log10(adjusted p-value)"
+    ) +
+    theme_light()
