@@ -1,4 +1,4 @@
-# Casus-Transcriptomics---Reuma
+# RNA-seq analyse van reumatoïde artritis: differentiële genexpressie en GO-analyse
 
 # Inleiding:
 +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling. Bronnen (PDF) kunnen in een aparte folder met verwijzing.
