@@ -1,23 +1,10 @@
 # ============================================
 # 05_KEGG-analyse.R
-# Doel: Achterhalen welke GO-termen verschillen
-#       tussen RA en gezond
-# ============================================library(BiocManager)
-BiocManager::install("clusterProfiler")
-BiocManager::install("pathview")
-BiocManager::install("EnhancedVolcano")
-BiocManager::install("goseq")
-BiocManager::install("org.Hs.eg.db")
-library(clusterProfiler)
-library(pathview)
-library(EnhancedVolcano)
-library(goseq)
-library(org.Hs.eg.db)
+# Doel: Bepalen welke biologische pathways (KEGG) 
+#       betrokken zijn bij RA
+# ============================================
 
-library(Rsubread)
-library(Rsamtools)
-library(DESeq2)
-library(KEGGREST)
+library(org.Hs.eg.db)
 library(ggplot2)
 library(dplyr)
 
@@ -149,6 +136,3 @@ down_genes <- rownames(res[(res$log2FoldChange < -1) & (res$padj < 0.05), ])
       size = "Aantal genen"  
     )
   
-    ## Opslaan
-    write.csv(GO_up, "pathways_up.csv")
-    write.csv(GO_down, "pathways_down.csv")
