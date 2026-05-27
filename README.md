@@ -28,4 +28,4 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 - File met uitleg over toepassing beheren met GitHub
 
 ## Referenties
-Zie [Bronnen](Bronnen)
+Zie [Referenties](Referenties)
