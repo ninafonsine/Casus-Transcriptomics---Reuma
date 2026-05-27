@@ -7,6 +7,8 @@
 library(org.Hs.eg.db)
 library(ggplot2)
 library(dplyr)
+library(KEGGREST)
+library(clusterProfiler)
 
 # Set working directory
 setwd(...)
