@@ -24,5 +24,7 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 ## Referenties
 Zie [Referenties](Referenties)
 
+## AI Gebruik
+
 ## Competentie beheren
 Zie [Data_Stewardship](Data_Stewardship) en [Beheren](Beheren)
