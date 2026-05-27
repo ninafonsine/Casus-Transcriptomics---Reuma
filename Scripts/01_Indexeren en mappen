@@ -1,21 +1,13 @@
-library(BiocManager)
-BiocManager::install("clusterProfiler")
-BiocManager::install("pathview")
-BiocManager::install("EnhancedVolcano")
-BiocManager::install("goseq")
-BiocManager::install("org.Hs.eg.db")
-library(clusterProfiler)
-library(pathview)
-library(EnhancedVolcano)
-library(goseq)
-library(org.Hs.eg.db)
+# ============================================
+# 01_Indexeren en mappen.R
+# Doel: Het indexeren van het referentiegenoom,
+#       waarop de monsters gemapt en verwerkt 
+#       worden tot gesorteerde en geïndexeerde 
+#       BAM-bestanden
+# ============================================
 
 library(Rsubread)
 library(Rsamtools)
-library(DESeq2)
-library(KEGGREST)
-library(ggplot2)
-library(dplyr)
 
 # Set working directory
 setwd(...)
