@@ -1,4 +1,8 @@
-library(BiocManager)
+# ============================================
+# 05_KEGG-analyse.R
+# Doel: Achterhalen welke GO-termen verschillen
+#       tussen RA en gezond
+# ============================================library(BiocManager)
 BiocManager::install("clusterProfiler")
 BiocManager::install("pathview")
 BiocManager::install("EnhancedVolcano")
