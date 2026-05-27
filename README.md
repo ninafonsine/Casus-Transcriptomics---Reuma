@@ -10,6 +10,8 @@ Inleiding over het gehele onderzoek, niet specifiek over welk gen/pathway is gek
 ## Methode: 
 +- 200 woorden met methode, flowschema. Zie leerdoelen voor minimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
 
+
+
 ## Resultaten: 
 +- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
 
