@@ -49,6 +49,6 @@ head(counts)
 write.csv(counts, 'reuma_countmatrix.csv')
 
 
-#Count matrix van Dewi inladen:
+#Count matrix verkregen van docent inladen:
 
 counts = count_matrix_RA
