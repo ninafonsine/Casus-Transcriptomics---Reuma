@@ -114,7 +114,7 @@ write.csv(counts, 'reuma_countmatrix.csv')
 
 
 
-#Count matrix van Dewi inladen:
+#Count matrix van docent inladen:
 
 counts = count_matrix_RA
 
@@ -187,7 +187,7 @@ names(down_vec) <- rownames(res)
 
   ## Resultaten bekijken
   ### Corrigeren voor multiple testing
-  GO_up$padj <- p.adjust(GO.up$over_represented_pvalue, method = "BH")
+  GO_up$padj <- p.adjust(GO_up$over_represented_pvalue, method = "BH")
 
   sig_GO_up <- GO_up[GO_up$padj < 0.05, ]
 
