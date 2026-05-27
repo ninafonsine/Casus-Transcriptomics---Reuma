@@ -15,17 +15,14 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 ## Methode: 
 +- 200 woorden met methode, flowschema. Zie leerdoelen voor minimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
 
-
-
 ## Resultaten: 
 +- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
 
 ## Conclusie:
 +- 200 woorden, inclusief aanbevelingen en onderzoek in context plaatsen.
 
-## Uitleg competentie beheren (zie voor hulpvragen het voorbeeld):
-- File (bijvoorbeeld een md file) met uitleg over Data Stewardship
-- File met uitleg over toepassing beheren met GitHub
-
 ## Referenties
 Zie [Referenties](Referenties)
+
+## Competentie beheren
+Zie [Data_Stewardship](Data_Stewardship) en [Beheren](Beheren)
