@@ -26,3 +26,6 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 ## Uitleg competentie beheren (zie voor hulpvragen het voorbeeld):
 - File (bijvoorbeeld een md file) met uitleg over Data Stewardship
 - File met uitleg over toepassing beheren met GitHub
+
+## Referenties
+Zie [Bronnen](Bronnen)
