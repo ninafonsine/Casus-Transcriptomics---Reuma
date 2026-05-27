@@ -17,10 +17,10 @@ library(KEGGREST)
 library(ggplot2)
 library(dplyr)
 
-#Set working directory
+# Set working directory
 setwd(...)
 
-#Referentiegenoom indexeren:
+# Referentiegenoom indexeren:
 buildindex(
   basename = 'ref_humangenome',
   reference = 'Genoom_Mens.fna',
