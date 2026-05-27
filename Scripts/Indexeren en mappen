@@ -18,7 +18,7 @@ library(ggplot2)
 library(dplyr)
 
 #Set working directory
-setwd("~/Library/CloudStorage/OneDrive-NHLStenden/Casus Reuma")
+setwd(...)
 
 #Referentiegenoom indexeren:
 buildindex(
