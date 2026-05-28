@@ -19,7 +19,7 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
   <img src="Flowschema.png" alt="Flowschema.png" width="600"/>
 </p>
 
-<sub>Figuur 1. Flowschema van het onderzoek waarbij de RNA-seq data van patiëntmonsters wordt verwerkt tot een volcano plot, GO-plots en een visualisatie van een specifieke pathway
+<sub>Figuur 1. Flowschema van het onderzoek waarbij de RNA-seq data van patiëntmonsters wordt verwerkt tot een volcano plot, GO plots en de visualisatie van een specifieke pathway
 
 ## Resultaten: 
 +- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
