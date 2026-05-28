@@ -18,6 +18,7 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 <p align="center">
   <img src="Flowschema.png" alt="Flowschema.png" width="600"/>
 </p>
+<sub>Figuur 1. Flowschema
 
 ## Resultaten: 
 +- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
