@@ -15,6 +15,10 @@ In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen diff
 ## Methode: 
 +- 200 woorden met methode, flowschema. Zie leerdoelen voor minimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
 
+<p align="center">
+  <img src="assets/Flowschema.png" alt="Flowschema.png" width="600"/>
+</p>
+
 ## Resultaten: 
 +- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
 
