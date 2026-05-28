@@ -10,7 +10,7 @@ Reumatoïde artritis (RA) is een vorm van reuma die ervoor zorgt dat het immuuns
 Om gerichte therapieën te ontwikkelen, is het essentieel om te begrijpen wat er op moleculair niveau gebeurt in het geval van RA. Chronische ontsteking en gewrichtsschade wordt gestimuleerd door een interactie van verschillende immuuncellen en (pro-inflammatoire) cytokinen, waaronder TNF-α, IL-6 en IL-17. RNA sequencing (RNA-seq) is een krachtige methode die verandering in genexpressie kan detecteren op grote schaal en zo inzicht kan bieden in de onderliggende mechanismen van deze ziekte.
 
 
-In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in acht patiënten met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
+In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht patiënten met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
 ## Methode: 
 +- 200 woorden met methode, flowschema. Zie leerdoelen voor minimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
