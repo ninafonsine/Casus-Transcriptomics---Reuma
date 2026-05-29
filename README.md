@@ -53,7 +53,7 @@ KEGG pathway analyse toonde een duidelijke verrijking van pathways betrokken bij
 
 <sub>Figuur4. KEGG pathway analyse van RA (hsa05323) pathway met differentieel tot expressie gebrachte genen. Rood gekleurde genen horen bij een log2 fold change boven de 1 (upregulated) en blauw gekleurde genen horen bij een log2 fold change onder de -1 (downregulated). De componenten van de TNF- en IL-17 signaleringsroutes vertonen met name een verhoogde expressie.
 
-Deze resultaten wijzen op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[18]](Referenties).
+Deze resultaten wijzen op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[19]](Referenties).
 
 ## 📖Conclusie:
 In dit onderzoek werden duidelijke verschillen in genexpressie gevonden tussen RA patiënten en gezonde individuen, met een nadruk op pro inflammatoire pathways. Deze bevindingen bevestigen de rol van immuunactivatie in RA. Het kleine aantal monsters vormt echter een beperking. Voor toekomstig onderzoek wordt aanbevolen om grotere datasets en eventueel technieken zoals single-cell RNA-seq toe te passen. Ondanks deze beperking bieden de resultaten waardevolle inzichten in de moleculaire mechanismen van RA.
