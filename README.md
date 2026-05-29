@@ -13,7 +13,8 @@ Om gerichte therapieën te ontwikkelen, is het essentieel om te begrijpen wat er
 In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht patiënten met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
 ## Methode: 
-Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) afkomstig van vier gezonde patiënten en vier patiënten met RA werden allereerst gemapt op het [humane referentiegenoom](Referentiegenoom) met behulp van het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
+Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) afkomstig van vier gezonde patiënten en vier patiënten met RA werden allereerst gemapt op het [humane referentiegenoom](Referentiegenoom) nadat dit vooraf was geïndexeerd met behulp van het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
+
 
 Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld, waarin het aantal reads per gen per sample werd bepaald op basis van een [GTF-annotatiebestand](Referentiegenoom). Deze count matrix werd vervolgens gebruikt als input voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van een adjusted p-waarde (padj < 0,05) en absolute log2 fold change waarden groter dan 1, wat overeenkomt met een verdubbeling of halvering van de genexpressie.
 
