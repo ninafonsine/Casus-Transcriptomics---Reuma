@@ -19,7 +19,7 @@ Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](
 
 Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met het goseq (v1.62.0)[[9]](Referenties) package, waarbij gecorrigeerd werd voor genlengtebias op basis van het humane referentiegenoom (hg19), en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[10]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[11]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[12]](Referenties).
 
-Om de resultaten te visualiseren werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[13]](Referenties), dplyr (v1.2.1)[[14]](Referenties) en EnhancedVolcano (v1.28.2)[[15]](Referenties) packages. Als laatste werd de pathview (v1.50.0)[[16]](Referenties) package gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway.
+Om de resultaten te visualiseren werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[13]](Referenties), dplyr (v1.2.1)[[14]](Referenties) en EnhancedVolcano (v1.28.2)[[15]](Referenties) packages. Als laatste werd de pathview (v1.50.0)[[16]](Referenties) package gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway (ksa05323)[[17]](Referenties).
 
 Een flowschema van de volledige analysepipeline is weergegeven in [figuur 1](Flowschema.png).
 
