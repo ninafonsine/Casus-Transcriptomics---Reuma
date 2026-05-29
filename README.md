@@ -8,17 +8,17 @@ Reumatoïde artritis (RA) is een vorm van reuma waarbij het immuunsysteem lichaa
 
 Om gerichte therapieën te ontwikkelen, is informatie over wat er op moleculair niveau gebeurt in het geval van RA essentieel. Chronische ontsteking en gewrichtsschade wordt gestimuleerd door interacties tussen immuuncellen en (pro-inflammatoire) cytokinen, waaronder TNF-α, IL-6 en IL-17 [[4]](Referenties)[[5]](Referenties)[[6]](Referenties). RNA sequencing (RNA-seq) is een methode die verandering in genexpressie kan detecteren op grote schaal en zo inzicht kan bieden in de onderliggende mechanismen van deze ziekte.
 
-In dit onderzoek werd met RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht personen met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
+In dit onderzoek werd met RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht personen met en zonder RA [[7]](Referenties). Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
 
 ## 💻Methode: 
-Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) werden gemapt op het [humane referentiegenoom](Data/Ruw/Referentiegenoom) nadat dit vooraf was geïndexeerd met het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
+Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw)) [[7]](Referenties) werden gemapt op het [humane referentiegenoom](Data/Ruw/Referentiegenoom) nadat dit vooraf was geïndexeerd met het Rsubread (v2.25.0)[[8]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
 
-Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld op basis van een [GTF-annotatiebestand](Data/Ruw/Referentiegenoom). Deze count matrix werd vervolgens gebruikt voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van padj < 0,05 en |log2 fold change| > 1.
+Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld op basis van een [GTF-annotatiebestand](Data/Ruw/Referentiegenoom). Deze count matrix werd vervolgens gebruikt voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[9]](Referenties), waarbij significante genen werden geselecteerd op basis van padj < 0,05 en |log2 fold change| > 1.
 
-Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met goseq (v1.62.0)[[9]](Referenties), waarbij gecorrigeerd werd voor genlengtebias met hg19, en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[10]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[11]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[12]](Referenties).
+Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met goseq (v1.62.0)[[10]](Referenties), waarbij gecorrigeerd werd voor genlengtebias met hg19, en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[11]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[12]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[13]](Referenties).
 
-Ter visualisatie werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[13]](Referenties), dplyr (v1.2.1)[[14]](Referenties) en EnhancedVolcano (v1.28.2)[[15]](Referenties) packages. Pathview (v1.50.0)[[16]](Referenties) werd gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway (ksa05323)[[17]](Referenties).
+Ter visualisatie werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[14]](Referenties), dplyr (v1.2.1)[[15]](Referenties) en EnhancedVolcano (v1.28.2)[[16]](Referenties) packages. Pathview (v1.50.0)[[17]](Referenties) werd gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway (ksa05323)[[18]](Referenties).
 
 Een flowschema van de analysepipeline is weergegeven in [figuur 1](Flowschema.png).
 
