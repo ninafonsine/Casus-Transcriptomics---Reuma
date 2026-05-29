@@ -12,9 +12,9 @@ In dit onderzoek werd met RNA-seq geïdentificeerd welke genen differentieel tot
 
 
 ## 💻Methode: 
-Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) werden gemapt op het [humane referentiegenoom](Referentiegenoom) nadat dit vooraf was geïndexeerd met het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
+Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) werden gemapt op het [humane referentiegenoom](Data/Ruw/Referentiegenoom) nadat dit vooraf was geïndexeerd met het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
 
-Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld op basis van een [GTF-annotatiebestand](Referentiegenoom). Deze count matrix werd vervolgens gebruikt voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van padj < 0,05 en |log2 fold change| > 1.
+Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld op basis van een [GTF-annotatiebestand](Data/Ruw/Referentiegenoom). Deze count matrix werd vervolgens gebruikt voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van padj < 0,05 en |log2 fold change| > 1.
 
 Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met goseq (v1.62.0)[[9]](Referenties), waarbij gecorrigeerd werd voor genlengtebias met hg19, en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[10]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[11]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[12]](Referenties).
 
