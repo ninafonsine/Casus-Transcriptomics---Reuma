@@ -1,5 +1,8 @@
 Data stewardship houdt in dat onderzoeksdata op een gestructureerde en reproduceerbare manier worden beheerd. In mijn transcriptomics-project is dat belangrijk, omdat ruwe sequencingdata, scripts en resultaten op een logische manier terug te vinden moeten zijn. Daarom heb ik gewerkt met een duidelijke mappenstructuur, met aparte mappen voor ruwe data, processed data, scripts en resultaten. 
+
 Het gebruik van mappen, hyperlinks en verschillende kopjes helpen de lezer om gemakkelijk de benodigde informatie en data te vinden. In de README is daardoor gebruik gemaakt van hyperlinks voor de ruwe sequencing data, het referentiegenoom en de count matrix. Ook zijn de gebruikte vermeld met versienummers in de methode.
+
 Daarnaast heb ik mijn script opgedeeld in genummerde onderdelen met per stap een korte toelichting. In de code zelf zijn opmerkingen toegevoegd, zodat duidelijk is wat elke analyse doet en waarom. Dit maakt het onderzoek overzichtelijker en beter controleerbaar. 
+
 Goed databeheer zorgt ervoor dat anderen het onderzoek makkelijker kunnen begrijpen en herhalen. Daardoor wordt de analyse niet alleen efficiënter, maar ook sneller reproduceerbaar. GitHub is hiervoor een geschikte omgeving, aangezien data en documentatie overzichtelijk in één plek te vinden zijn.
 
