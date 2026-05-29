@@ -3,7 +3,7 @@
 
 <sub>Datum: 29-05-2026
 
-## Inleiding:
+## 🩺Inleiding:
 Reumatoïde artritis (RA) is een vorm van reuma die ervoor zorgt dat het immuunsysteem lichaamseigen weefsel aanvalt, voornamelijk de synoviale gewrichten. Dit leidt vaak tot pijn, ontstekingen, en zelfs schade aan bot en kraakbeen. In 2024 kregen 11.700 mensen de diagnose RA in Nederland [[1]](Referenties). Helaas is er momenteel geen genezing en wordt de ontwikkeling van effectieve therapieën bemoeilijkt door de variatie aan ziekteverloop tussen patiënten [[2]](Referenties)[[3]](Referenties).
  
 
@@ -12,7 +12,7 @@ Om gerichte therapieën te ontwikkelen, is het essentieel om te begrijpen wat er
 
 In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht patiënten met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
-## Methode: 
+## 💻Methode: 
 Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) afkomstig van vier gezonde patiënten en vier patiënten met RA werden allereerst gemapt op het [humane referentiegenoom](Referentiegenoom) nadat dit vooraf was geïndexeerd met behulp van het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
 
 
@@ -30,7 +30,7 @@ Een flowschema van de volledige analysepipeline is weergegeven in [figuur 1](Flo
 
 <sub>Figuur 1. Flowschema van het onderzoek waarbij de RNA-seq data van patiëntmonsters wordt verwerkt tot een volcano plot, GO plots en de visualisatie van een specifieke pathway
 
-## Resultaten: 
+## 📊Resultaten: 
 De differentiële genexpressieanalyse met DESeq2 identificeerde een groot aantal genen die significant verschillend tot expressie kwamen tussen gezonde individuen en RA‑patiënten. In totaal werden meer genen gevonden die downregulated waren dan upregulated, wat visueel weergegeven is in de [volcano plot](VolcanoPlotRA.jpg) (figuur2), waarin ook duidelijk een scheiding zichtbaar is tussen significante (rood gekleurd) en niet-significante genen.
 
 <p align="center">
@@ -57,7 +57,7 @@ KEGG pathway analyse toonde een duidelijke verrijking van pathways betrokken bij
 
 Deze resultaten wijzen gezamelijk op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[18]](Referenties).
 
-## Conclusie:
+## 📖Conclusie:
 +- 200 woorden, inclusief aanbevelingen en onderzoek in context plaatsen.
 
 ## Referenties
