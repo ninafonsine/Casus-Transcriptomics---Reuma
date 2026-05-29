@@ -63,4 +63,4 @@ In dit onderzoek werden duidelijke verschillen in genexpressie gevonden tussen R
 Zie [Referenties](Referenties)
 
 ## Competentie beheren
-Zie [Data_Stewardship](Data_Stewardship) en [Beheren](Beheren)
+Zie [Competentie beheren](Competentie beheren).
