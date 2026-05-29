@@ -3,7 +3,7 @@
 
 <sub>Datum: 29-05-2026
 
-## 🩺Inleiding:
+## 💪Inleiding:
 Reumatoïde artritis (RA) is een vorm van reuma waarbij het immuunsysteem lichaamseigen weefsel aanvalt, voornamelijk de synoviale gewrichten. Dit leidt tot pijn, ontstekingen en schade aan bot en kraakbeen. In 2024 kregen 11.700 mensen de diagnose RA in Nederland [[1]](Referenties). Er is momenteel geen genezing en de ontwikkeling van effectieve therapieën wordt bemoeilijkt door variatie aan ziekteverloop tussen patiënten [[2]](Referenties)[[3]](Referenties).
 
 Om gerichte therapieën te ontwikkelen, is informatie over wat er op moleculair niveau gebeurt in het geval van RA essentieel. Chronische ontsteking en gewrichtsschade wordt gestimuleerd door interacties tussen immuuncellen en (pro-inflammatoire) cytokinen, waaronder TNF-α, IL-6 en IL-17 [[4]](Referenties)[[5]](Referenties)[[6]](Referenties). RNA sequencing (RNA-seq) is een methode die verandering in genexpressie kan detecteren op grote schaal en zo inzicht kan bieden in de onderliggende mechanismen van deze ziekte.
