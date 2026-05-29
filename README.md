@@ -25,13 +25,37 @@ Om de resultaten te visualiseren werden volcano plots en enrichment plots gemaak
 Een flowschema van de volledige analysepipeline is weergegeven in [figuur 1](Flowschema.png).
 
 <p align="center">
-  <img src="Flowschema.png" alt="Flowschema.png" width="600"/>
+  <img src="Flowschema.png" alt="Flowschema.png" width="400"/>
 </p>
 
 <sub>Figuur 1. Flowschema van het onderzoek waarbij de RNA-seq data van patiëntmonsters wordt verwerkt tot een volcano plot, GO plots en de visualisatie van een specifieke pathway
 
 ## Resultaten: 
-+- 200 woorden, inclusief correcte verwijzingen. Packages met versienummer en bronnen.
+De differentiële genexpressieanalyse met DESeq2 identificeerde een groot aantal genen die significant verschillend tot expressie kwamen tussen gezonde individuen en RA‑patiënten. In totaal werden meer genen gevonden die downregulated waren dan upregulated, wat visueel weergegeven is in de [volcano plot](VolcanoPlotRA.jpg) (figuur2), waarin ook duidelijk een scheiding zichtbaar is tussen significante (rood gekleurd) en niet-significante genen.
+
+<p align="center">
+  <img src="Resultaten/VolcanoPlotRA.jpg" alt="Volcano Plot" width="600"/>
+</p>
+
+<sub>Figuur2. Volcano plot van de differentiële genexpressie tussen individuen met en zonder RA. De x-as toont de log2 fold change en de y-toont de –log10 van de adjusted p‑waarde. Genen met een hoge absolute log2 fold change en lage p‑waarde zijn significant verschillend tot expressie gebracht (weergegeven in het rood). Upregulated genen bevinden zich rechts van de lijn, terwijl downregulated genen zich links bevinden.
+
+De GO‑analyse liet zien dat upregulated genen vooral sterk verhoogd tot expressie kwamen in immuun- en ontstekingsgerelateerde processen, zoals cytokineproductie en immuunrespons. Downregulated genen hadden voornamelijk een verhoogde expressie in algemene cellulaire processen, waaronder structuur en metabolisme. Deze bevindingen werden bevestigd door de [top‑10 analyse](Top10_processen.jpg) (figuur3), waarin de meest significante GO-termen bij upregulated genen gekoppeld waren aan ontstekingsmechanismen.
+
+<p align="center">
+  <img src="Resultaten/Top10_processen.jpg" alt="Top 10 Processen" width="650"/>
+</p>
+
+<sub>Figuur3. Top 10 verrijkte GO-termen voor up- en downregulated genen bij RA. De hoogte van de balken geeft de −log10(adjusted p‑waarde weer.
+
+KEGG pathway analyse toonde een duidelijke verrijking van pathways betrokken bij RA, waaronder de cytokinesignalering en T‑celactivatie. Met name pathways zoals de TNF- en IL-17 signaleringsroutes kwamen naar voren in de upregulated genen. De pathview visualisatie van de [rheumatoid arthritis pathway (hsa05323)](hsa05323.RA_pathway.png) (figuur4) bevestigde deze resultaten, waarbij meerdere genen binnen ontstekingsroutes verhoogde expressie vertoonden (weergegeven in het rood).
+
+<p align="center">
+  <img src="Resultaten/hsa05323.RA_pathway.png" alt="Pathway analyse hsa05323" width="650"/>
+</p>
+
+<sub>Figuur4. KEGG pathway analyse van RA (hsa05323) pathway met differentieel tot expressie gebrachte genen. Rood gekleurde genen horen bij een log2 fold change boven de 1 (upregulated) en blauw gekleurde genen horen bij een log2 fold change onder de -1 (downregulated). De componenten van de TNF- en IL-17 signaleringsroutes vertonen met name een verhoogde expressie.
+
+Deze resultaten wijzen gezamelijk op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[18]](Referenties).
 
 ## Conclusie:
 +- 200 woorden, inclusief aanbevelingen en onderzoek in context plaatsen.
