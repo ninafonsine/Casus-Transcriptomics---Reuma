@@ -58,7 +58,10 @@ KEGG pathway analyse toonde een duidelijke verrijking van pathways betrokken bij
 Deze resultaten wijzen gezamelijk op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[18]](Referenties).
 
 ## 📖Conclusie:
-+- 200 woorden, inclusief aanbevelingen en onderzoek in context plaatsen.
+In dit onderzoek werd RNA-seq analyse gebruikt om de verschillen in genexpressie tussen patiënten met en zonder RA te identificeren. De resultaten tonen een duidelijke upregulatie van genen die betrokken zijn bij o.a. immuun- en ontstekingsprocessen, terwijl de downregulated genen voornamelijk gerelateerd zijn aan algemene cellulaire processen. De GO  en KEGG analyses wijzen beide op een versterkte activatie van pro inflammatoire pathways, zoals cytokinesignalering en T celactivatie. De pathview analyse bevestigt deze bevindingen door het tonen van een verhoogde expressie van genen binnen de rheumatoid arthritis pathway (hsa05323).
+
+Deze resultaten zijn consistent met het bekende mechanisme van RA als auto-immuunziekte gekenmerkt door chronische ontstekingen. Het kleine aantal monster maakt het onderzoek echter beperkt. Ondanks deze beperkingen dragen deze resultaten bij aan een beter begrip van de moleculaire mechanismen van RA. Voor toekomstige onderzoeken wordt aanbevolen om meer monsters te nemen en eventueel het gebruik van gedetailleerde technieken, zoals single-cell RNA-seq. 
+
 
 ## Referenties
 Zie [Referenties](Referenties)
