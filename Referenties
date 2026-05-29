@@ -12,6 +12,24 @@
 
 [6] Deshpande, D., Chhugani, K., Chang, Y., Karlsberg, A., Loeffler, C., Zhang, J., Muszyńska, A., Munteanu, V., Yang, H., Rotman, J., Tao, L., Balliu, B., Tseng, E., Eskin, E., Zhao, F., Mohammadi, P., Łabaj, P. P., & Mangul, S. (2023). RNA-seq data science: From raw data to effective interpretation. Frontiers in Genetics, 14. https://doi.org/10.3389/fgene.2023.997383
 
-[7] 
+[7] Liao, Y., Smyth, G. K., & Shi, W. (2014). featureCounts: An efficient general-purpose program for assigning sequence reads to genomic features. Bioinformatics, 30(7).
 
 [8] Love, M.I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15, 550 (2014). https://doi.org/10.1186/s13059-014-0550-8
+
+[9] Young, M. D., Wakefield, M. J., Smyth, G. K., & Oshlack, A. (2010). Gene ontology analysis for RNA-seq: Accounting for selection bias. Genome Biology, 11(2).
+
+[10] Carlson, M. (2024). org.Hs.eg.db: Genome-wide annotation for Human (R package). Bioconductor. https://doi.org/10.18129/B9.bioc.org.Hs.eg.db
+
+[11] Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: An R package for comparing biological themes among gene clusters. OMICS, 16(5)
+
+[12] KEGGREST. (z.d.). Bioconductor. https://bioconductor.org/packages//release/bioc/html/KEGGREST.html
+
+[13] Create Elegant Data Visualisations Using the Grammar of Graphics. (z.d.). https://ggplot2.tidyverse.org/
+
+[14] A Grammar of Data Manipulation. (z.d.). https://dplyr.tidyverse.org/
+
+[15] Blighe, K., Rana, S., & Lewis, M. (2019). EnhancedVolcano: Publication-ready volcano plots.
+
+[16] Luo, W., & Brouwer, C. (2013). Pathview: an R/Bioconductor package for pathway-based data integration and visualization. Bioinformatics (Oxford, England), 29(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
+
+[17] KEGG PATHWAY: hsa05323. (z.d.). https://www.kegg.jp/entry/hsa05323
