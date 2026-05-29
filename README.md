@@ -56,15 +56,11 @@ KEGG pathway analyse toonde een duidelijke verrijking van pathways betrokken bij
 Deze resultaten wijzen op een sterke activatie van immuun- en ontstekingsprocessen bij RA. Dit is consistent met het bekende pathologische mechanisme van de ziekte [[18]](Referenties).
 
 ## 📖Conclusie:
-In dit onderzoek werd RNA-seq analyse gebruikt om de verschillen in genexpressie tussen patiënten met en zonder RA te identificeren. De resultaten tonen een duidelijke upregulatie van genen die betrokken zijn bij o.a. immuun- en ontstekingsprocessen, terwijl de downregulated genen voornamelijk gerelateerd zijn aan algemene cellulaire processen. De GO  en KEGG analyses wijzen beide op een versterkte activatie van pro inflammatoire pathways, zoals cytokinesignalering en T celactivatie. De pathview analyse bevestigt deze bevindingen door het tonen van een verhoogde expressie van genen binnen de rheumatoid arthritis pathway (hsa05323).
-
-Deze resultaten zijn consistent met het bekende mechanisme van RA als auto-immuunziekte gekenmerkt door chronische ontstekingen. Het kleine aantal monster maakt het onderzoek echter beperkt. Ondanks deze beperkingen dragen deze resultaten bij aan een beter begrip van de moleculaire mechanismen van RA. Voor toekomstige onderzoeken wordt aanbevolen om meer monsters te nemen en eventueel het gebruik van gedetailleerde technieken, zoals single-cell RNA-seq. 
+In dit onderzoek werden duidelijke verschillen in genexpressie gevonden tussen RA patiënten en gezonde individuen, met een nadruk op pro inflammatoire pathways. Deze bevindingen bevestigen de rol van immuunactivatie in RA. Het kleine aantal monsters vormt echter een beperking. Voor toekomstig onderzoek wordt aanbevolen om grotere datasets en eventueel technieken zoals single-cell RNA-seq toe te passen. Ondanks deze beperking bieden de resultaten waardevolle inzichten in de moleculaire mechanismen van RA.
 
 
 ## Referenties
 Zie [Referenties](Referenties)
-
-## AI Gebruik
 
 ## Competentie beheren
 Zie [Data_Stewardship](Data_Stewardship) en [Beheren](Beheren)
