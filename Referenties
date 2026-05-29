@@ -14,26 +14,28 @@
 
 [6] Deshpande, D., Chhugani, K., Chang, Y., Karlsberg, A., Loeffler, C., Zhang, J., Muszyńska, A., Munteanu, V., Yang, H., Rotman, J., Tao, L., Balliu, B., Tseng, E., Eskin, E., Zhao, F., Mohammadi, P., Łabaj, P. P., & Mangul, S. (2023). RNA-seq data science: From raw data to effective interpretation. Frontiers in Genetics, 14. https://doi.org/10.3389/fgene.2023.997383
 
-[7] Liao, Y., Smyth, G. K., & Shi, W. (2014). featureCounts: An efficient general-purpose program for assigning sequence reads to genomic features. Bioinformatics, 30(7).
+[7] Platzer, A., Nussbaumer, T., Karonitsch, T., Smolen, J. S., & Aletaha, D. (2019). Analysis of gene expression in rheumatoid arthritis and related conditions offers insights into sex-bias, gene biotypes and co-expression patterns. PloS one, 14(7), e0219698. https://doi.org/10.1371/journal.pone.0219698
 
-[8] Love, M.I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15, 550 (2014). https://doi.org/10.1186/s13059-014-0550-8
+[8] Liao, Y., Smyth, G. K., & Shi, W. (2014). featureCounts: An efficient general-purpose program for assigning sequence reads to genomic features. Bioinformatics, 30(7).
 
-[9] Young, M. D., Wakefield, M. J., Smyth, G. K., & Oshlack, A. (2010). Gene ontology analysis for RNA-seq: Accounting for selection bias. Genome Biology, 11(2).
+[9] Love, M.I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol 15, 550 (2014). https://doi.org/10.1186/s13059-014-0550-8
 
-[10] Carlson, M. (2024). org.Hs.eg.db: Genome-wide annotation for Human (R package). Bioconductor. https://doi.org/10.18129/B9.bioc.org.Hs.eg.db
+[10] Young, M. D., Wakefield, M. J., Smyth, G. K., & Oshlack, A. (2010). Gene ontology analysis for RNA-seq: Accounting for selection bias. Genome Biology, 11(2).
 
-[11] Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: An R package for comparing biological themes among gene clusters. OMICS, 16(5)
+[11] Carlson, M. (2024). org.Hs.eg.db: Genome-wide annotation for Human (R package). Bioconductor. https://doi.org/10.18129/B9.bioc.org.Hs.eg.db
 
-[12] KEGGREST. (z.d.). Bioconductor. https://bioconductor.org/packages//release/bioc/html/KEGGREST.html
+[12] Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: An R package for comparing biological themes among gene clusters. OMICS, 16(5)
 
-[13] Create Elegant Data Visualisations Using the Grammar of Graphics. (z.d.). https://ggplot2.tidyverse.org/
+[13] KEGGREST. (z.d.). Bioconductor. https://bioconductor.org/packages//release/bioc/html/KEGGREST.html
 
-[14] A Grammar of Data Manipulation. (z.d.). https://dplyr.tidyverse.org/
+[14] Create Elegant Data Visualisations Using the Grammar of Graphics. (z.d.). https://ggplot2.tidyverse.org/
 
-[15] Blighe, K., Rana, S., & Lewis, M. (2019). EnhancedVolcano: Publication-ready volcano plots.
+[15] A Grammar of Data Manipulation. (z.d.). https://dplyr.tidyverse.org/
 
-[16] Luo, W., & Brouwer, C. (2013). Pathview: an R/Bioconductor package for pathway-based data integration and visualization. Bioinformatics (Oxford, England), 29(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
+[16] Blighe, K., Rana, S., & Lewis, M. (2019). EnhancedVolcano: Publication-ready volcano plots.
 
-[17] KEGG PATHWAY: hsa05323. (z.d.). https://www.kegg.jp/entry/hsa05323
+[17] Luo, W., & Brouwer, C. (2013). Pathview: an R/Bioconductor package for pathway-based data integration and visualization. Bioinformatics (Oxford, England), 29(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
 
-[18] McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. The New England journal of medicine, 365(23), 2205–2219. https://doi.org/10.1056/NEJMra1004965
+[18] KEGG PATHWAY: hsa05323. (z.d.). https://www.kegg.jp/entry/hsa05323
+
+[19] McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. The New England journal of medicine, 365(23), 2205–2219. https://doi.org/10.1056/NEJMra1004965
