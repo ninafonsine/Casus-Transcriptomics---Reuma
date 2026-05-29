@@ -4,25 +4,24 @@
 <sub>Datum: 29-05-2026
 
 ## 🩺Inleiding:
-Reumatoïde artritis (RA) is een vorm van reuma die ervoor zorgt dat het immuunsysteem lichaamseigen weefsel aanvalt, voornamelijk de synoviale gewrichten. Dit leidt vaak tot pijn, ontstekingen, en zelfs schade aan bot en kraakbeen. In 2024 kregen 11.700 mensen de diagnose RA in Nederland [[1]](Referenties). Helaas is er momenteel geen genezing en wordt de ontwikkeling van effectieve therapieën bemoeilijkt door de variatie aan ziekteverloop tussen patiënten [[2]](Referenties)[[3]](Referenties).
- 
+Reumatoïde artritis (RA) is een vorm van reuma waarbij het immuunsysteem lichaamseigen weefsel aanvalt, voornamelijk de synoviale gewrichten. Dit leidt tot pijn, ontstekingen en schade aan bot en kraakbeen. In 2024 kregen 11.700 mensen de diagnose RA in Nederland [[1]](Referenties). Er is momenteel geen genezing en de ontwikkeling van effectieve therapieën wordt bemoeilijkt door variatie aan ziekteverloop tussen patiënten [[2]](Referenties)[[3]](Referenties).
 
-Om gerichte therapieën te ontwikkelen, is het essentieel om te begrijpen wat er op moleculair niveau gebeurt in het geval van RA. Chronische ontsteking en gewrichtsschade wordt gestimuleerd door een interactie van verschillende immuuncellen en (pro-inflammatoire) cytokinen, waaronder TNF-α, IL-6 en IL-17 [[4]](Referenties)[[5]](Referenties)[[6]](Referenties). RNA sequencing (RNA-seq) is een krachtige methode die verandering in genexpressie kan detecteren op grote schaal en zo inzicht kan bieden in de onderliggende mechanismen van deze ziekte.
+Om gerichte therapieën te ontwikkelen, is informatie over wat er op moleculair niveau gebeurt in het geval van RA essentieel. Chronische ontsteking en gewrichtsschade wordt gestimuleerd door interacties tussen immuuncellen en (pro-inflammatoire) cytokinen, waaronder TNF-α, IL-6 en IL-17 [[4]](Referenties)[[5]](Referenties)[[6]](Referenties). RNA sequencing (RNA-seq) is een methode die verandering in genexpressie kan detecteren op grote schaal en zo inzicht kan bieden in de onderliggende mechanismen van deze ziekte.
 
+In dit onderzoek werd met RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht personen met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
-In dit onderzoek wordt door middel van RNA-seq geïdentificeerd welke genen differentieel tot expressie zijn gebracht in een synoviumbiopt van acht patiënten met en zonder RA. Met behulp van GO- en KEGG-analyse worden de bijbehorende biologische processen en pathways gekarakteriseerd.
 
 ## 💻Methode: 
-Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) afkomstig van vier gezonde patiënten en vier patiënten met RA werden allereerst gemapt op het [humane referentiegenoom](Referentiegenoom) nadat dit vooraf was geïndexeerd met behulp van het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
+Ruwe sequencingdata ([FASTQ-bestanden](Data/Ruw) werden gemapt op het [humane referentiegenoom](Referentiegenoom) nadat dit vooraf was geïndexeerd met het Rsubread (v2.25.0)[[7]](Referenties) package. De verkregen BAM-bestanden werden vervolgens gesorteerd en geïndexeerd met Rsamtools.
 
 
-Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld, waarin het aantal reads per gen per sample werd bepaald op basis van een [GTF-annotatiebestand](Referentiegenoom). Deze count matrix werd vervolgens gebruikt als input voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van een adjusted p-waarde (padj < 0,05) en absolute log2 fold change waarden groter dan 1, wat overeenkomt met een verdubbeling of halvering van de genexpressie.
+Hierna werd met featureCounts uit hetzelfde Rsubread package een [count matrix](count_matrix_RA.txt) opgesteld op basis van een [GTF-annotatiebestand](Referentiegenoom). Deze count matrix werd vervolgens gebruikt voor differentiële genexpressieanalyse met DESeq2 (v1.50.2)[[8]](Referenties), waarbij significante genen werden geselecteerd op basis van padj < 0,05 en |log2 fold change| > 1.
 
-Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met het goseq (v1.62.0)[[9]](Referenties) package, waarbij gecorrigeerd werd voor genlengtebias op basis van het humane referentiegenoom (hg19), en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[10]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[11]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[12]](Referenties).
+Voor functionele interpretatie werden Gene Ontology (GO) en KEGG pathway analyses uitgevoerd. GO-enrichment werd uitgevoerd met goseq (v1.62.0)[[9]](Referenties), waarbij gecorrigeerd werd voor genlengtebias met hg19, en genannotatie werd verkregen via het org.Hs.eg.db (v3.22.0)[[10]](Referenties) package. KEGG-enrichment werd bepaald met het clusterProfiler (v4.18.4)[[11]](Referenties) package, waarbij pathway-informatie werd opgehaald via KEGGREST (v1.50.0)[[12]](Referenties).
 
-Om de resultaten te visualiseren werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[13]](Referenties), dplyr (v1.2.1)[[14]](Referenties) en EnhancedVolcano (v1.28.2)[[15]](Referenties) packages. Als laatste werd de pathview (v1.50.0)[[16]](Referenties) package gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway (ksa05323)[[17]](Referenties).
+Ter visualisatie werden volcano plots en enrichment plots gemaakt met ggplot2 (v4.0.3)[[13]](Referenties), dplyr (v1.2.1)[[14]](Referenties) en EnhancedVolcano (v1.28.2)[[15]](Referenties) packages. Pathview (v1.50.0)[[16]](Referenties) werd gebruikt om differentiële genexpressie te tonen op de KEGG rheumatoid arthritis pathway (ksa05323)[[17]](Referenties).
 
-Een flowschema van de volledige analysepipeline is weergegeven in [figuur 1](Flowschema.png).
+Een flowschema van de analysepipeline is weergegeven in [figuur 1](Flowschema.png).
 
 <p align="center">
   <img src="Flowschema.png" alt="Flowschema.png" width="400"/>
